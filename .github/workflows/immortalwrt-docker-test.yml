@@ -19,6 +19,9 @@ on:
         required: false
         default: 'false'
 
+ schedule:
+     - cron: 0 */8 * * *
+
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-18.06
@@ -63,7 +66,7 @@ jobs:
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
     - name: Cache
-      uses: actions/cache@v2.1.7
+      uses: klever1988/cachewrtbuild@main
       with:
         ccache: 'true'
         prefix: ${{ github.workspace }}/openwrt
