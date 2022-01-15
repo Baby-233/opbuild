@@ -2,6 +2,8 @@
 
 #### immortalwrt-docker-all 包含各种常用插件 ####
 
+coremark
+
 ipv6helper
 
 open-vm-tools
